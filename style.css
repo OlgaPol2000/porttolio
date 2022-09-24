@@ -25,12 +25,45 @@
   }
 
   .container {
-    max-width: 1170px;
+    max-width: 1200px;
     width: 100%;
     padding: 0 15px;
     margin: 0 auto;
   }
   
+  /* home */
+
   .home{
     height: 100vh;
+    position: relative;
+    z-index: 1;
   }
+
+  .home::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+  }
+
+  .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav__list{
+    display: flex;
+  }
+
+  .nav__item{
+    margin-right: 30px;
+  }
+
+  .nav__item:last-child{
+    margin-right: 0px;
+  }
+
