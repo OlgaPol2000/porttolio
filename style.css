@@ -1,69 +1,121 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
-  
-  ol,
-  ul,
-  menu {
-    list-style: none;
-  }
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .body {
-    font-family: "Open Sans", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-  .container {
-    max-width: 1200px;
-    width: 100%;
-    padding: 0 15px;
-    margin: 0 auto;
-  }
-  
-  /* home */
+ol,
+ul,
+menu {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-  .home{
-    height: 100vh;
-    position: relative;
-    z-index: 1;
-  }
+body {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
 
-  .home::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: -1;
-  }
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
 
-  .nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .nav__list{
-    display: flex;
-  }
+/* home */
 
-  .nav__item{
-    margin-right: 30px;
-  }
+.home {
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+}
 
-  .nav__item:last-child{
-    margin-right: 0px;
-  }
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 75px;
+}
+.nav__list {
+  display: flex;
+}
+
+.nav__item {
+  margin-right: 30px;
+}
+
+.nav__item:last-child {
+  margin-right: 0px;
+}
+
+.nav__link {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  transition: color 0.5s linear;
+}
+
+.nav__link:hover {
+  color: #2352de;
+}
+
+.home__inner {
+  max-width: 640px;
+  width: 100%;
+  height: calc(100vh - 218px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home__title {
+  font-size: 48px;
+  line-height: 65px;
+}
+
+.home__subtitle {
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 123px;
+}
+
+.home__link {
+  position: relative;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  display: block;
+}
+
+.home__link{
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 37px;
+  height: 21px;
+  background-image: url(./img/arrow-d.svg);
+  top: 45px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
