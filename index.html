@@ -4,29 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./fonts.css">
+    <link rel="stylesheet" href="./fonts.css" />
     <link rel="stylesheet" href="./style.css" />
     <title>portfolio</title>
   </head>
   <body>
-    <section class="home" style="background-image: url(./img/bg.jpg);" >
+    <section class="home" style="background-image: url(./img/bg.png)">
       <div class="container">
         <nav class="nav">
-          <a class="logo" href="#" >
-            <img class="logo__img" src="./img/logo.svg" alt="logo">
+          <a class="logo" href="#">
+            <img class="logo__img" src="./img/logo.svg" alt="logo" />
           </a>
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="nav__link"  href="#">Про мене</a>
+              <a class="nav__link" href="#">Про мене</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link"  href="#">Навички</a>
+              <a class="nav__link" href="#">Навички</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link"  href="#">Портфоліо</a>
+              <a class="nav__link" href="#">Портфоліо</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link"  href="#">Контакти</a>
+              <a class="nav__link" href="#">Контакти</a>
             </li>
           </ul>
         </nav>
@@ -35,6 +35,56 @@
           <h2 class="home__subtitle">frontend - розробник</h2>
         </div>
         <a class="home__link" href="/">дивитись роботи</a>
+      </div>
+    </section>
+    <section class="about">
+      <div class="container">
+        <div class="about__inner">
+          <h1 class="title">Про мене</h1>
+          <ul class="about__list">
+            <li class="about__item">
+              <p class="about__text">
+                Вітаю всіх на своєму сайті! Мене звуть Оля, я з Вінниці. Займаюся
+                фронтенд-розробкою понад рік. До розробки займався нелюбимою
+                справою, ходив на нелюбиму роботу, не міг зрозуміти, за що
+                взятися, щоб справа приносила задоволення і гроші, поки не
+                наткнувся на один цікавий курс.
+              </p>
+            </li>
+            <li class="about__item">
+              <p class="about__text">
+                З того часу пройшов вогонь, воду та мідні труби. Навчання
+                давалося по-різному: десь легше, десь складніше. Щоденна робота
+                над навичками та старанність, з якою я підходив до навчання, вже
+                через кілька місяців принесли плоди – я взяв перше замовлення на
+                фрілансі. З відгуками клієнтів та прикладами робіт можна
+                ознайомитись нижче.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="skills">
+      <div class="container">
+        <h2 class="title">Навички</h2>
+        <div class="skills__inner">
+          <img class="skills__img" src="./img/photo.jpg" alt="photo" >
+          <ul class="skills__list">
+            <li class="skills__item">
+              Html
+              <span class="skills__rate"></span>
+            </li>
+            <li class="skills__item">
+              Css
+              <span class="skills__rate"></span>
+            </li>
+            <li class="skills__item">
+              Js
+              <span class="skills__rate"></span>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   </body>
