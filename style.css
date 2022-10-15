@@ -47,12 +47,13 @@ body {
   left: 0;
   height: 15px;
   width: 100%;
-  background: rgba(35, 82, 222, 0.1);
+  background: rgba(156, 114, 196, 0.1);
 }
 
 /* home */
 
 .home {
+  max-width: 1920;
   height: 100vh;
   position: relative;
   z-index: 1;
@@ -98,7 +99,7 @@ body {
 }
 
 .nav__link:hover {
-  color: #2352de;
+  color: #a13ec9;
 }
 
 .home__inner {
@@ -235,29 +236,29 @@ body {
   align-items: center;
 }
 
-.skills__img{
+.skills__img {
   max-width: 415px;
   width: 100%;
   object-fit: cover;
   margin-right: 15px;
 }
 
-.skills__list{
+.skills__list {
   max-width: 600px;
   width: 100%;
 }
-.skills__item{
+.skills__item {
   display: flex;
   justify-content: space-between;
   margin-bottom: 85px;
   align-items: center;
 }
 
-.skills__text{
+.skills__text {
   margin-right: 15px;
   width: 50px;
 }
-.skills__item:last-child{
+.skills__item:last-child {
   margin-bottom: 0px;
 }
 .skills__rate {
@@ -265,32 +266,77 @@ body {
   max-width: 600px;
   width: 100%;
   height: 32px;
-  background: #dbdbed;
+  background: #ecdbf0;
 }
 
-.skills__percent{
+.skills__percent {
   display: block;
-  background-color: #2352DE;
+  background-color: #a13ec9;
   height: 32px;
 }
 
-@media screen and (max-width: 992px){
-  .skills__img{
+@media screen and (max-width: 992px) {
+  .skills__img {
     max-width: 335px;
   }
-
 }
 
-@media screen and (max-width: 768px){
-  .skills__inner{
+@media screen and (max-width: 768px) {
+  .skills__inner {
     flex-direction: column;
   }
-  .skills__img{
+  .skills__img {
     max-width: 600px;
     margin-right: 0px;
     margin-bottom: 30px;
   }
-  .skills__item{
+  .skills__item {
     margin-bottom: 35px;
   }
+}
+
+/* projects */
+
+.projects--title{
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 130%;
+  margin-bottom: 60px;
+  display: inline-block;
+  position: relative;
+}
+.projects__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+}
+.projects__link{
+  position: relative;
+}
+
+.projects__link::before{
+  content: "";
+  width: 360px;
+  height: 360px;
+  position: absolute;
+  background-color: transparent;
+  transition: all 0.8s linear;
+}
+
+.projects__link::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -900%;
+  transform: translate(-50%, -50%);
+  background-image: url(./img/arrow-d.svg);
+}
+.projects__link:hover.projects__link::before {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.projects__link:hover.projects__link::after{
+  width: 37px;
+  height: 21px;
+  transition: height 1s linear;
 }
