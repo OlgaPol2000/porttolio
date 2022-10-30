@@ -53,13 +53,13 @@ body {
 /* home */
 
 .home {
-  max-width: 1920;
   height: 100vh;
   position: relative;
   z-index: 1;
   color: #ffffff;
   background-repeat: no-repeat;
-  /* background-size: ; */
+  background-size: cover;
+  background-position: center bottom;
 }
 
 .home::before {
@@ -99,7 +99,7 @@ body {
 }
 
 .nav__link:hover {
-  color: #a13ec9;
+  color: #7955cc;
 }
 
 .home__inner {
@@ -226,7 +226,7 @@ body {
 /* skills */
 
 .skills {
-  background-color: #f6f6f8;
+  background-color: #f4f1fd;
   padding: 140px 0;
 }
 
@@ -266,12 +266,12 @@ body {
   max-width: 600px;
   width: 100%;
   height: 32px;
-  background: #ecdbf0;
+  background: #c6bae4;
 }
 
 .skills__percent {
   display: block;
-  background-color: #a13ec9;
+  background-color: #7955cc;
   height: 32px;
 }
 
@@ -297,33 +297,33 @@ body {
 
 /* projects */
 
-.projects--title{
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 130%;
-  margin-bottom: 60px;
-  display: inline-block;
-  position: relative;
+.projects {
+  text-align: center;
 }
+
 .projects__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 45px;
 }
-.projects__link{
+.projects__link {
   position: relative;
 }
 
-.projects__link::before{
+.projects__item {
+  overflow: hidden;
+}
+
+.projects__link::before {
   content: "";
+  position: absolute;
   width: 360px;
   height: 360px;
-  position: absolute;
   background-color: transparent;
   transition: all 0.8s linear;
 }
 
-.projects__link::after{
+.projects__link::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -331,12 +331,179 @@ body {
   transform: translate(-50%, -50%);
   background-image: url(./img/arrow-d.svg);
 }
+
 .projects__link:hover.projects__link::before {
   background-color: rgba(0, 0, 0, 0.5);
 }
-
-.projects__link:hover.projects__link::after{
+.projects__link:hover.projects__link::after {
   width: 37px;
   height: 21px;
   transition: height 1s linear;
+}
+
+.projects__img {
+  max-width: 360px;
+  width: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .projects__list {
+    gap: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* contacts */
+
+.contact {
+  padding: 135px 0;
+}
+
+.contact__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact__social {
+  max-width: 530px;
+  width: 100%;
+}
+
+.contact__text {
+  font-size: 16px;
+  line-height: 160%;
+  color: #333333;
+  margin-bottom: 30px;
+}
+
+.contact__phone {
+  display: block;
+  color: #7955cc;
+  margin-bottom: 15px;
+}
+
+.contact__mail {
+  color: #7955cc;
+  margin-bottom: 20px;
+}
+
+.contact__list {
+  display: flex;
+}
+
+.contact__item {
+  width: 44px;
+  height: 44px;
+  margin-right: 20px;
+}
+
+.contact__link {
+  margin-right: 20px;
+  position: relative;
+  font-size: 0;
+  width: 44px;
+  height: 44px;
+}
+
+.contact__link::before {
+  content: "";
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  top: 0;
+  left: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.contact__link--instagram::before {
+  background-image: url(./img/instagram.svg);
+}
+.contact__link--Facebook::before {
+  background-image: url(./img/facebook.svg);
+}
+.contact__link--telegram::before {
+  background-image: url(./img/telegram.svg);
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  max-width: 540px;
+  width: 100%;
+}
+
+.contact__form-inner {
+  display: flex;
+  margin-bottom: 30px;
+}
+.contact__label {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 130%;
+  color: #333333;
+}
+
+.contact__label:first-child {
+  margin-right: 30px;
+}
+
+.contact__input {
+  font-size: 14px;
+  line-height: 130%;
+  color: #9c9cab;
+  margin-top: 10px;
+  padding: 13px 15px;
+  background-color: #f6f6f8;
+  border: none;
+  max-width: 255px;
+  width: 100%;
+  outline: none;
+}
+
+.contact__input::placeholder {
+  font-size: 14px;
+  line-height: 130%;
+  color: #9c9cab;
+}
+.contact__textarea {
+  padding: 13px 15px;
+  font-size: 14px;
+  line-height: 130%;
+  color: #9c9cab;
+  outline: none;
+  margin-top: 10px;
+  width: 540px;
+  height: 155px;
+  background-color: #f6f6f8;
+  border: none;
+}
+
+.contact__textarea::placeholder {
+  font-size: 14px;
+  line-height: 130%;
+  color: #9c9cab;
+}
+
+.contact__button {
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  padding: 12px 24px;
+  max-width: 150px;
+  background-color: #7955cc;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 130%;
+}
+
+@media screen and (max-width: 992px){
+  .contact__form{
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
