@@ -9,6 +9,7 @@
     <title>portfolio</title>
   </head>
   <body>
+    
     <section class="home" style="background-image: url(./img/bg.png)">
       <div class="container">
         <nav class="nav">
@@ -188,12 +189,14 @@
             <div class="contact__form-inner">
               <label class="contact__label"
                 >Ведіть своє ім'я
-                <input class="contact__input" type="text" placeholder="Ольга" />
+                <input required class="contact__input" name="name" type="text" placeholder="Ольга" />
               </label>
               <label class="contact__label"
                 >Номер телефона
                 <input
+                required
                   class="contact__input"
+                  name="phone"
                   type="text"
                   placeholder="+380501111111"
                 />
@@ -202,7 +205,9 @@
             <label class="contact__label"
               >Ваше сповіщення
               <textarea
+              required
                 class="contact__textarea"
+                name="message"
                 placeholder="Текст вашего сповіщення"
               ></textarea>
             </label>
@@ -211,8 +216,7 @@
         </div>
       </div>
     </section>
-    <script>
-    
-    </script>
+    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </body>
 </html>
