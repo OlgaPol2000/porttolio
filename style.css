@@ -19,7 +19,7 @@ a {
 }
 
 html,
-body{
+body {
   scroll-behavior: smooth;
 }
 
@@ -29,13 +29,12 @@ body {
   font-weight: 400;
 }
 
-
-.scroll{
+.scroll {
   position: fixed;
   right: 30px;
   bottom: 30px;
 }
-.scroll__img{
+.scroll__img {
   fill: #7955cc;
 }
 
@@ -65,11 +64,11 @@ body {
   background: rgba(156, 114, 196, 0.1);
 }
 
-.menu{
+.menu {
   display: none;
   background-color: #cec7df;
   padding: 5px 10px;
-  border-radius: 20px;
+  border-radius: 10px;
   border: none;
   color: #7955cc;
   font-size: 20px;
@@ -77,22 +76,19 @@ body {
   z-index: 5;
 }
 
-.menu:hover{
-  box-shadow: 5px 5px 10px #fff;
+.menu:hover {
+  box-shadow: 3px 3px 10px #b9b9b9;
 }
 
-.menu:active{
+.menu:active {
   background-color: #ffffff;
-  
 }
 
 @media screen and (max-width: 992px) {
-  .menu{
+  .menu {
     display: block;
   }
 }
-
-
 
 /* home */
 
@@ -220,19 +216,21 @@ body {
     right: 0;
     top: 0;
     padding-top: 170px;
-    background-color: rgba(26, 26, 26, 0.253) ;
+    background-color: #7955cc;
+    backdrop-filter: blur(10px);
+    background-color: rgba(26, 26, 26, 0.253);
     backdrop-filter: 15px;
     flex-direction: column;
   }
-  .nav__item{
+  .nav__item {
     text-align: center;
     margin-right: 0;
   }
-  .nav__link{
+  .nav__link {
     line-height: 60px;
     font-size: 50px;
   }
-  .active{
+  .active {
     display: flex;
   }
 }
@@ -292,6 +290,7 @@ body {
 .skills {
   background-color: #f4f1fd;
   padding: 140px 0;
+  
 }
 
 .skills__inner {
@@ -357,6 +356,29 @@ body {
   .skills__item {
     margin-bottom: 35px;
   }
+}
+
+/* services */
+
+
+.services__img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 30px;
+}
+
+.services__subtitle {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 130%;
+  margin-bottom: 25px;
+}
+
+.services__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  max-width: 330px;
 }
 
 /* projects */
@@ -579,32 +601,32 @@ body {
   line-height: 130%;
 }
 
-@media screen and (max-width: 992px){
-  .contact__inner{
+@media screen and (max-width: 992px) {
+  .contact__inner {
     flex-direction: column;
     align-items: center;
   }
 
-  .contact__social{
+  .contact__social {
     margin-bottom: 30px;
   }
 }
 
-@media screen and (max-width: 540px){
-  .contact__form-inner{
+@media screen and (max-width: 540px) {
+  .contact__form-inner {
     flex-direction: column;
   }
 
-  .contact__label{
-  display: flex;
+  .contact__label {
+    display: flex;
     flex-direction: column;
   }
 
-  .contact__label:first-child{
+  .contact__label:first-child {
     margin-right: 0px;
   }
 
-  .contact__input{
+  .contact__input {
     max-width: 490px;
   }
 }
