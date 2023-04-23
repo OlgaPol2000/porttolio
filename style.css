@@ -407,6 +407,12 @@ body {
   max-width: 330px;
 }
 
+@media screen and (max-width: 468px) {
+  .services__list{
+    flex-direction: column;
+  }
+}
+
 /* projects */
 
 .projects {
@@ -422,6 +428,7 @@ body {
   position: relative;
   height: 100%;
   display: inline-block;
+  
 }
 
 .projects__item {
@@ -477,6 +484,12 @@ body {
 @media screen and (max-width: 768px) {
   .projects__list {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .projects__link{
+    
   }
 }
 
